@@ -11,6 +11,11 @@ const routes = [
     component: () => import('@/pages/select.vue'),
     meta: { title: '教室・クラスの選択｜豊田少年少女出席システム' },
   },
+  {
+    path: '/roster',
+    component: () => import('@/pages/roster.vue'),
+    meta: { title: '出席簿｜豊田少年少女出席システム' },
+  },
 ]
 
 const router = createRouter({
