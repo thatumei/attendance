@@ -1,34 +1,29 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import HomeView from '../pages/Home.vue'
+import SelectView from '../pages/Select.vue'
+import RostarView from '../pages/Rostar.vue'
 
 const routes = [
   {
     path: '/',
-    component: () => import('@/pages/index.vue'),
-    meta: { title: 'ログイン｜豊田少年少女出席システム' },
+    name: 'home',
+    component: HomeView
   },
   {
     path: '/select',
-    component: () => import('@/pages/select.vue'),
-    meta: { title: '教室・クラスの選択｜豊田少年少女出席システム' },
+    name: 'select',
+    component: SelectView
   },
   {
-    path: '/roster',
-    component: () => import('@/pages/roster.vue'),
-    meta: { title: '出席簿｜豊田少年少女出席システム' },
-  },
+    path: '/rostar',
+    name: 'rostar',
+    component: RostarView
+  }
 ]
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes,
+  history: createWebHistory(process.env.BASE_URL),
+  routes
 })
-
-// タイトルを動的に変更する処理
-router.beforeEach((to) => {
-  const title = to.meta.title as string | undefined;
-  if (title) {
-    document.title = title;
-  }
-});
 
 export default router
