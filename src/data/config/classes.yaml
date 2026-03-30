@@ -1,0 +1,25 @@
+classrooms:
+  - name: "産文"
+    classes:
+      - { name: "1年生", count: 10 }
+      - { name: "2年生", count: 20 }
+      - { name: "3年生", count: 15 }
+      - { name: "4年生", count: 21 }
+      - { name: "5年生", count: 25 }
+      - { name: "6年生", count: 20 }
+      - { name: "AD1", count: 21 }
+      - { name: "AD2", count: 18 }
+      - { name: "AD3", count: 12 }
+      - { name: "OM", count: 10 }
+  - name: "保見"
+    classes: &standard_classes
+      - { name: "1年生", count: 10 }
+      - { name: "2年生", count: 10 }
+      - { name: "3年生", count: 10 }
+      - { name: "4年生", count: 10 }
+      - { name: "5年生", count: 10 }
+      - { name: "6年生", count: 10 }
+  - name: "地文"
+    classes: *standard_classes
+  - name: "緑ヶ丘"
+    classes: *standard_classes

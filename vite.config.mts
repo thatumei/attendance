@@ -3,6 +3,7 @@ import Vue from '@vitejs/plugin-vue'
 import Fonts from 'unplugin-fonts/vite'
 import { defineConfig } from 'vite'
 import Vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
+import yaml from '@rollup/plugin-yaml';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -28,6 +29,7 @@ export default defineConfig({
         ],
       },
     }),
+    yaml(),
   ],
   define: { 'process.env': {} },
   resolve: {
